@@ -38,7 +38,7 @@ struct Node* insertInTree(struct Node* root,int data){
        return root;
 }
 
-struct list* hi_to_lo_level_order(struct Node* root){
+struct list* leaf_level_order(struct Node* root){
      struct list* head = NULL;
      enQueue(root);
      while(!isEmpty()){
@@ -56,7 +56,7 @@ int main(){
     int n,data;
     scanf("%d\n",&n);
     while(n--){scanf("%d\n",&data); rt = insertInTree(rt,data);}
-    struct list* node = hi_to_lo_level_order(rt);
+    struct list* node = leaf_level_order(rt);
     while(node != NULL){printf("%d\n",node->data);node = node->next;}
     return 0;
 }
