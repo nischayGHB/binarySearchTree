@@ -16,7 +16,7 @@ struct list* push(struct list* head,int data){
 }
 
 int front=-1,rear=-1;
-const int size = 1000;
+const int size = 1e7 + 10;
 struct Node* queue[size];
 void enQueue(struct Node* data){if(rear == size-1){}else{if(front<0) ++front;queue[++rear] = data;}}
 void deQueue(){if(front<0){}else{if(front == rear)front=rear=-1;else{++front;}}}
